@@ -9,7 +9,7 @@ num_lst = [1, 2, 3, 4, 5]
 
 #option 1: calculate the standard deviation using for loops, no functions required
 
-def std_loops(x):
+def std_loops(numbers):
     """
     Compute standard deviation of x using loops
     
@@ -22,16 +22,16 @@ def std_loops(x):
     i = 0
     
     #find the sum of num_lst
-    for x in num_lst:
-        sum += x
+    for value in numbers:
+        sum += value
         i += 1
         
     #calculate the mean
     x_mean = sum / i
     
     #compute the mean of squares
-    for x in num_lst:
-        sum_sq += x**2
+    for value in numbers:
+        sum_sq += value**2
         x_mean_sq = sum_sq / i
 
     #compute the variance
@@ -45,10 +45,8 @@ def std_loops(x):
 print(f'the standard deviation calculated using method 1 is {std_loops(num_lst):.2f}')
         
 
-num_lst = [1, 2, 3, 4, 5]
-
 #option 2: calculate the standard deviation using python's built-in functions
-def std_builtin(x):
+def std_builtin(numbers):
     """
     Compute standard deviation of x using the built-in functions sum() and ln()
     
@@ -57,10 +55,10 @@ def std_builtin(x):
         std: standard deviation (float, rounded to 2 digits) of the list of numbers
     """
     #calculate the mean
-    x_mean = sum(num_lst) / len(num_lst)
+    x_mean = sum(numbers) / len(numbers)
     
     #compute the mean of squares
-    x_mean_sq = sum(x**2 for x in num_lst) /len(num_lst)
+    x_mean_sq = sum(value**2 for value in numbers) /len(numbers)
     
     #compute the variance
     variance = x_mean_sq - x_mean**2
