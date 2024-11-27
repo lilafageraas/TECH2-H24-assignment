@@ -11,12 +11,19 @@ num_lst = [1, 2, 3, 4, 5]
 
 def std_loops(numbers):
     """
-    Compute standard deviation of x using loops
     
-    Parameters:
-        x: sequence of numbers
-        std: standard deviation (float, rounded to 2 digits) of the list of numbers
+
+    Parameters
+    ----------
+    numbers : sequence of numbers 
+
+    Returns
+    -------
+    std: float
+        standard deviation (float, rounded to 2 digits) of the list of numbers
+
     """
+  
     sum = 0
     sum_sq = 0
     i = 0
@@ -48,12 +55,20 @@ print(f'the standard deviation calculated using method 1 is {std_loops(num_lst):
 #option 2: calculate the standard deviation using python's built-in functions
 def std_builtin(numbers):
     """
-    Compute standard deviation of x using the built-in functions sum() and ln()
     
-    Parameters:
-        x: sequence of numbers
-        std: standard deviation (float, rounded to 2 digits) of the list of numbers
+
+    Parameters
+    ----------
+    numbers : sequence of numbers
+    std: standard deviation (float, rounded to 2 digits) of the list of numbers
+
+    Returns
+    -------
+    std : float
+        Compute standard deviation of x using the built-in functions sum() and ln()
+
     """
+    
     #calculate the mean
     x_mean = sum(numbers) / len(numbers)
     
